@@ -1,0 +1,7 @@
+[
+    {"id":1, "name":"Dhanush", "age":21, "city":"Salem"},
+    {"id":2, "name":"Abishek", "age":29, "city":"Namakkal"},
+    {"id":3, "name":"Kishore", "age":29, "city":"Chennai"},
+    {"id":4, "name":"Murugan", "age":20, "city":"Bangalore"},
+    {"id":5, "name":"Ganesh", "age":22, "city":"Bangalore"}
+]
