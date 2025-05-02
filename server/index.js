@@ -4,6 +4,7 @@ const cors = require("cors")
 const fs=require("fs")
 
 const app=express()
+app.use(express.json())
 const port=8000
 app.use(
     cors({
@@ -16,7 +17,45 @@ app.get("/users", (req,res)=>{
     return res.json(users)
 })
 
+//Delete user
+app.delete("/users/:id",(req,res)=>{
+    let id=Number(req.params.id)
+    let filteredUsers=users.filter((user)=>user.id!==id)
+    fs.writeFile("./sample.json",JSON.stringify(filteredUsers),(err,data)=>{
+        return res.json(filteredUsers)
+    })
+})
 
+//Add user
+app.post("/users",(req,res)=>{
+    let {name,age,city}=req.body
+    if(!name || !age || !city){
+        res.status(400).send({message:"All Fields Required"})
+    }
+    let id=Date.now();
+    users.push({id,name,age,city})
+
+    fs.writeFile("./sample.json",JSON.stringify(users),(err,data)=>{
+        return res.json({message:"User detail added successfully"})
+    })
+})
+
+//Update user
+app.patch("/users/:id",(req,res)=>{
+    let id=Number(req.params.id)
+    let {name,age,city}=req.body
+    if(!name || !age || !city){
+        res.status(400).send({message:"All Fields Required"})
+    }
+    let index=users.findIndex((user)=> user.id==id)
+
+    users.splice(index, 1, { id, name, age, city });
+
+
+    fs.writeFile("./sample.json",JSON.stringify(users),(err,data)=>{
+        return res.json({message:"User detail updated successfully"})
+    })
+})
 
 app.listen(port, (err)=>{
     console.log(`App is running in port ${port}`)

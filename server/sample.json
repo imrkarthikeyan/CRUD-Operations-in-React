@@ -1,7 +1,1 @@
-[
-    {"id":1, "name":"Dhanush", "age":21, "city":"Salem"},
-    {"id":2, "name":"Abishek", "age":29, "city":"Namakkal"},
-    {"id":3, "name":"Kishore", "age":29, "city":"Chennai"},
-    {"id":4, "name":"Murugan", "age":20, "city":"Bangalore"},
-    {"id":5, "name":"Ganesh", "age":22, "city":"Bangalore"}
-]
+[{"id":1,"name":"Dhanush","age":21,"city":"Salem"},{"id":3,"name":"Kishore","age":29,"city":"Chennai"},{"id":4,"name":"Murugan","age":20,"city":"Bangalore"},{"id":5,"name":"Ganesh","age":22,"city":"Bangalore"},{"id":7,"name":"kumar","age":32,"city":"Hydrabad"},{"id":8,"name":"thamiz","age":31,"city":"Salem"},{"id":9,"name":"Zara","age":25,"city":"Salem"},{"id":1746170327415,"name":"john wick","age":"26","city":"new york"},{"id":1746170580283,"name":"manoj","age":"19","city":"namkkal"},{"id":1746172518542,"name":"hardik","age":"30","city":"mumbai"},{"id":1746172563172,"name":"krunal","age":"31","city":"mumbai"}]
